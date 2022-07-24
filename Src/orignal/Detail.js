@@ -41,26 +41,26 @@ const Show = ({ navigation, route }) => {
             {/* body Section  */}
             {/* <View style={{ flex: 1 }}> */}
             {/* <ScrollView style={{ flex: 1, backgroundColor: 'red' }}> */}
-            <View style={{}}>
+            <View style={{ flex: 1, }}>
                 <Image source={{
                     uri: 'https://image.tmdb.org/t/p/w500/' + item.poster_path,
                 }}
                     style={styles.Image_Style}
                 />
             </View>
-            <View style={{ marginVertical: '-70%', padding: 15, backgroundColor: 'rgba(1,1,1,0.5)', }}>
+            <View style={{ flex: 1, marginVertical: '-70%', padding: 15, backgroundColor: 'rgba(1,1,1,0.5)', }}>
                 <ScrollView>
                     <Text style={styles.Title_Text}>
                         {item.title}
                     </Text>
-                    <Divider style={{ borderWidth: 0.3 }} />
-                    <Text> {showDate}</Text>
+                    <Divider style={{ borderWidth: 0.3, borderColor: 'white' }} />
+                    <Text style={{ color: 'ghostwhite' }}> {showDate}</Text>
                     <View style={{ flexDirection: 'row' }}>
                         <View style={{ flex: 1 }}>
-                            <Text> <FontAwesome5 name="crown" color={'ghostwhite'} size={15} />  {item.vote_average}% </Text>
+                            <Text style={{ color: 'ghostwhite' }}> <FontAwesome5 name="crown" color={'ghostwhite'} size={15} />  {item.vote_average}% </Text>
                         </View>
                         <View style={{ flex: 1, alignItems: 'flex-end' }}>
-                            <Text> <Ionicons name="alarm-outline" color={'ghostwhite'} size={15} />  {item.vote_average}% </Text>
+                            <Text style={{ color: 'ghostwhite' }}> <Ionicons name="alarm-outline" color={'ghostwhite'} size={15} />  {item.vote_average}% </Text>
 
                         </View>
                     </View>
@@ -68,7 +68,7 @@ const Show = ({ navigation, route }) => {
                         {item.overview}
                     </Text>
                 </ScrollView>
-            </View>
+            </View >
         </View >
     )
 }

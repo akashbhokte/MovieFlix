@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { Searchbar } from 'react-native-paper';
 import { View, Text, ScrollView, StyleSheet, Image, TouchableOpacity, FlatList } from 'react-native';
 import axios from 'axios';
-
 import { Card } from 'react-native-shadow-cards';
 
 import Detail from './Detail';
@@ -25,6 +24,8 @@ const NowPlayingScreen = ({ navigation }) => {
                 console.error(error);
             });
     }, []);
+
+    console.log("filteredDataSource", filteredDataSource[0])
 
     const searchFilterFunction = (text) => {
         if (text) {
